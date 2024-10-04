@@ -13,7 +13,7 @@ const ImageUploadForm = () => {
   
   const fetchImages = async () => {
       try {
-          const response = await axios.get('https://ieeesbmmmutbackend.vercel.app/highlights/getimages');
+          const response = await axios.get('https://ieee-backend-tu8h.onrender.com/highlights/getimages');
           console.log(response);   
           setImages(response.data);
         } catch (error) {
