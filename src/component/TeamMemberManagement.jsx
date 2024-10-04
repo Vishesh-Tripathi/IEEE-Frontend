@@ -12,7 +12,7 @@ const TeamMemberManagement = () => {
 
   const fetchTeamMembers = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/teams');
+      const response = await axios.get('https://ieee-backend-tu8h.onrender.com/teams');
       setTeamMembers(response.data);
     } catch (error) {
       console.error('Error fetching team members:', error);
@@ -42,9 +42,9 @@ const TeamMemberManagement = () => {
     e.preventDefault();
     try {
       if (editId) {
-        await axios.put(`http://localhost:4000/teams/${editId}`, formData);
+        await axios.put(`https://ieee-backend-tu8h.onrender.com/teams/${editId}`, formData);
       } else {
-        await axios.post('http://localhost:4000/teams', formData);
+        await axios.post('https://ieee-backend-tu8h.onrender.com/teams', formData);
       }
       setFormData({ name: '', role: '', imageUrl: '', socialLinks: { twitter: '', facebook: '', instagram: '', email: '' } });
       setEditId(null);
@@ -66,7 +66,7 @@ const TeamMemberManagement = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/teams/${id}`);
+      await axios.delete(`https://ieee-backend-tu8h.onrender.com/teams/${id}`);
       fetchTeamMembers();
     } catch (error) {
       console.error('Error deleting team member:', error);
