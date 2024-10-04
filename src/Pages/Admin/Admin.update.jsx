@@ -11,7 +11,7 @@ const AdminForm = () => {
   }, []);
 
   const fetchEvents = async () => {
-    const response = await axios.get('http://localhost:4000/events');
+    const response = await axios.get('https://ieeesbmmmutbackend.vercel.app/events');
     setEvents(response.data);
   };
 
@@ -21,18 +21,18 @@ const AdminForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('http://localhost:4000/events', formData);
+    await axios.post('https://ieeesbmmmutbackend.vercel.app/events', formData);
     fetchEvents(); // Refresh event list
     setFormData({ name: '', description: '', time: '', imageUrl: '' }); // Reset form
   };
 
   const handleUpdate = async (id) => {
-    await axios.put(`http://localhost:4000/events/${id}`, formData);
+    await axios.put(`https://ieeesbmmmutbackend.vercel.app/events/${id}`, formData);
     fetchEvents(); // Refresh event list
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:4000/events/${id}`);
+    await axios.delete(`https://ieeesbmmmutbackend.vercel.app/events/${id}`);
     fetchEvents(); // Refresh event list
   };
 
