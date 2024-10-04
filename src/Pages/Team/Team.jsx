@@ -10,7 +10,7 @@ const InstructorCard = () => {
 
   const fetchTeamMembers = async () => {
     try {
-      const response = await axios.get('http://localhost:4000/teams');
+      const response = await axios.get('https://ieeesbmmmutbackend.vercel.app/teams');
       setInstructors(response.data);
     } catch (error) {
       console.error('Error fetching team members:', error);
