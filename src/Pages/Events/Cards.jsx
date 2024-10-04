@@ -13,7 +13,7 @@ const CardGrid = () => {
 
   const fetchEvents = async () => {
     try {
-      const response = await axios.get('https://ieeesbmmmutbackend.vercel.app/events');
+      const response = await axios.get('https://ieee-backend-tu8h.onrender.com/events');
       console.log(response.data); // Log response data to ensure you're getting the right structure
       setCards(response.data); // Set the fetched data to cards
       setLoading(false); // Set loading to false after data is loaded
