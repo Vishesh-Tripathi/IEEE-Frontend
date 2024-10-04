@@ -119,14 +119,17 @@ const Navbar = () => {
           <NavLink to="/contact" className={({ isActive }) => isActive ? 'text-cyan-400' : 'hover:text-cyan-400'} onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}><li>Contact Us</li></NavLink>
 
           {/* Profile Icon when logged in */}
-          {isLoggedIn && (
-            <NavLink to="/profile" className="mt-4">
+         {isLoggedIn && (
+            <>
+            <NavLink to="/admin" className="ml-4">
               <img
-                src={profileLogo} // Path to profile image
+                src='https://listimg.pinclipart.com/picdir/s/367-3673668_open-man-with-tie-icon-clipart.png' // Path to profile image
                 alt="Profile"
                 className="h-10 w-10 rounded-full"
               />
             </NavLink>
+            <button  onClick={logout}>Logout</button>
+            </>
           )}
         </ul>
       )}
