@@ -1,5 +1,5 @@
 import React from 'react';
-import AdminForm from './admin.update.jsx';
+import AdminForm from './Admin.update.jsx';
 import ImageUploadForm from '../Events/HiglightsForm';
 
 const AdminDashboard = () => {
