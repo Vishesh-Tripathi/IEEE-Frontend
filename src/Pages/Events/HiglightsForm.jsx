@@ -13,7 +13,7 @@ const ImageUploadForm = () => {
   
   const fetchImages = async () => {
       try {
-          const response = await axios.get('https://ieee-backend-tu8h.onrender.com/highlights/getimages');
+          const response = await axios.get('https://ieee-backend-rgzb.vercel.app/highlights/getimages');
           console.log(response);   
           setImages(response.data);
         } catch (error) {
@@ -33,11 +33,11 @@ const ImageUploadForm = () => {
     try {
       if (editingImageId) {
         // Update existing image
-        await axios.put(`https://ieeesbmmmutbackend.vercel.app/highlights/images/${editingImageId}`, newImage);
+        await axios.put(`https://ieee-backend-rgzb.vercel.app/highlights/images/${editingImageId}`, newImage);
         setStatusMessage('Image updated successfully.');
       } else {
         // Add new image
-        await axios.post('https://ieeesbmmmutbackend.vercel.app/highlights/images', newImage);
+        await axios.post('https://ieee-backend-rgzb.vercel.app/highlights/images', newImage);
         setStatusMessage('Image uploaded successfully.');
       }
       fetchImages(); // Refresh the images
@@ -50,7 +50,7 @@ const ImageUploadForm = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://ieeesbmmmutbackend.vercel.app/highlights/images/${id}`);
+      await axios.delete(`https://ieee-backend-rgzb.vercel.app/highlights/images/${id}`);
       setStatusMessage('Image deleted successfully.');
       fetchImages(); // Refresh the images after deletion
     } catch (error) {
