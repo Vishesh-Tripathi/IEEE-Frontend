@@ -10,7 +10,7 @@ const Carousel = () => {
 
   const fetched = async() => {
     // Fetch images dynamically from backend
-    const res = await axios.get('https://ieee-backend-tu8h.onrender.com/highlights/getimages');
+    const res = await axios.get('https://ieee-backend-rgzb.vercel.app/highlights/getimages');
     setImageSet(res.data);
     console.log(res.data);
   };
